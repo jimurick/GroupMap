@@ -1,0 +1,61 @@
+\documentclass{standalone}
+\usepackage{tikz,db}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}]
+
+  \node[mytable] (plangroups) at (0,0) {
+    \textcolor{white}{PlanGroups}\nodepart{two}
+    \textcolor{black}{\tabular{@{}ll}
+      plan\_id & extra \\
+      group\_id & provenhealth\_navigator \\
+      address\_id & wheelchair\_accessible \\
+      phone & handicap\_accessible
+    \endtabular}
+  };
+
+  \path (plangroups.east) -- +(15mm,0mm) node (pge) {};
+
+  \path (pge) -- +(5mm,-2mm)
+    node[mytable,anchor=north west] (addresses) {
+      \textcolor{white}{Addresses}\nodepart{two}
+      \textcolor{black}{\tabular{@{}ll}
+        address\_id & city \\
+        formatted\_address & state \\
+        street1 & zipcode \\
+        street2 & lat \\
+        po\_box & lng
+      \endtabular}
+    };
+
+  \path (addresses.north) -- +(0mm,4mm)
+    node[mytable,anchor=south] (plans) {
+      \textcolor{white}{Plans}\nodepart{two}
+      \textcolor{black}{\tabular{@{}ll}
+        plan\_id & plan\_seo\_name\\
+        plan\_name & plan\_type\\
+        plan\_code
+      \endtabular}
+    };
+
+  \node (groups west) at (plans.east |- plangroups.west) {};
+  
+  \path (groups west) -- +(6mm,0mm) 
+    node[mytable,anchor=west] (groups) {
+      \textcolor{white}{Groups}\nodepart{two}
+      \textcolor{black}{\tabular{@{}l}
+        group\_id\\
+        group\_name\\
+        group\_code
+      \endtabular}
+    };
+
+  \draw[thick] (plans.west) -| (pge.center) |- (addresses.west);
+  \draw[thick] (plangroups) -- (groups);
+
+  \node[anchor=south west] at (plangroups.east) {1};
+  \node[anchor=south east] at (plans.west) {1};
+  \node[anchor=south east] at (addresses.west) {1};
+  \node[anchor=south east] at (groups.west) {1};
+
+\end{tikzpicture}
+\end{document}

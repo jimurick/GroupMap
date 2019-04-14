@@ -1,0 +1,26 @@
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart,arrows.meta,calc}
+
+% These 3 were because underscores were a little too close to the right
+% character:
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\definecolor{myblue}{RGB}{20,75,136}
+
+\tikzset{mytable/.style={
+    draw, color=myblue,
+    rounded corners,
+    shape=rectangle split,
+    rectangle split parts=2,
+    rectangle split part align={center,left},
+    rectangle split part fill={myblue,white}
+}}
+
+\tikzset{mypoint/.style={
+    fill,draw,circle,
+    minimum width=0pt,
+    inner sep=1.5pt,
+}}
+

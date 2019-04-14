@@ -1,0 +1,85 @@
+\documentclass{standalone}
+\usepackage{tikz,db}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}]
+
+  \node[mytable] (searches) at (0,0) {
+    \textcolor{white}{Searches}\nodepart{two}
+    \textcolor{black}{\tabular{@{}l}
+      search\_id\\
+      plan\_id\\
+      provider\_type\_id%\\
+      %search\_url
+    \endtabular}
+  };
+
+  \path (searches.west) 
+    -- ++(-8mm,0mm) node (west of searches) {}
+    -- ++(-9mm,15mm)
+    node[mytable,anchor=east] (plans) {
+      \textcolor{white}{Plans}\nodepart{two}
+      \textcolor{black}{\tabular{@{}l}
+        plan\_id\\
+        plan\_name\\
+        plan\_code\\
+        plan\_seo\_name\\
+        plan\_type%\\
+        %provider\_search\_url
+      \endtabular}
+    };
+
+  \path (plans) -- +(0mm,-30mm)
+    node[mytable] (providertypes) {
+      \textcolor{white}{ProviderTypes}\nodepart{two}
+      \textcolor{black}{\tabular{@{}l}
+        provider\_type\_id\\
+        provider\_type\_name\\
+        provider\_type\_code\\
+        provider\_supertype
+      \endtabular}
+    };
+
+  \draw[very thick] (searches.west) -- (west of searches.center);
+  \draw[very thick] (plans.east) -| (west of searches.center) |- (providertypes.east);
+  \node[anchor=south east] at (searches.west) {1};
+  \node[anchor=south west] at (plans.east) {1};
+  \node[anchor=south west] at (providertypes.east) {1};
+
+
+  \path (searches.east) -- +(15mm,0mm)
+    node[mytable,anchor=west] (searchfields) {
+      \textcolor{white}{SearchFields}\nodepart{two}
+      \textcolor{black}{\tabular{@{}l}
+        search\_id\\
+        field\_type\_id\\
+        required\_field\\
+        default\_value\\
+        field\_options
+      \endtabular}
+    };
+
+  \draw[very thick] (searches) -- (searchfields);
+  \node[anchor=south west] at (searches.east) {1};
+  \node[anchor=south east] at (searchfields.west) {0..N};
+
+
+  \path (searchfields.east) -- +(15mm,0mm)
+    node[mytable,anchor=west] (searchfieldtypes) {
+      \textcolor{white}{SearchFieldTypes}\nodepart{two}
+      \textcolor{black}{\tabular{@{}l}
+        field\_type\_id\\
+        field\_name\\
+        is\_input\\
+        is\_select\\
+        is\_button\\
+        is\_checkbox\\
+        all\_options
+      \endtabular}
+    };
+
+  \draw[very thick] (searchfields) -- (searchfieldtypes);
+  \node[anchor=south west] at (searchfields.east) {1..N};
+  \node[anchor=south east] at (searchfieldtypes.west) {1};
+
+\end{tikzpicture}
+\end{document}

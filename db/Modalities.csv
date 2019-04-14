@@ -1,0 +1,79 @@
+"modality_name","modality_code","modality_id"
+"Autism Services","AUTISM_SERVICES",0
+"Bariatric Surgery Center of Excellence","BARIATRIC_SURG",1
+"Bone Densitometry","BONE_DENSITY",2
+"Cardiac Catherization","CARD_CATH",3
+"Cardiac Rehabilitation","CARD_REHAB",4
+"Cardiac Surgery","CARDIAC_SURGERY",5
+"Chemotherapy","CHEMO",6
+"Computed Tomography Angiography","CTA",7
+"Diagnostic Radiology","DIAG_RADIOLOGY",8
+"Echocardiography","ECHO",9
+"Hand Therapy","HAND_THERAPY",10
+"Intensive Care Unit","ICU",11
+"Lithotripsy","LITHOTRIPSY",12
+"Long Term Acute Care","LTAC",13
+"Magnetic Resonance Angiography","MRA",14
+"Magnetic Resonance Imaging","MRI",15
+"Mammography","MAMMOGRAPHY",16
+"Nuclear Medicine","NUCLEAR_MED",17
+"Obstetrics","OBSTETRICS",18
+"Occupational Therapy","OT",19
+"Open Magnetic Resonance Imaging","OPEN_MRI",20
+"Physical Therapy","PT",21
+"Ultrasound","ULTRASOUND",22
+"Cardiac Event Monitoring","CARD_EVENT_MON",23
+"Mobile Cardiac Outpatient Telemetry","MOBILE_CARD_TELE",24
+"Pacemaker Monitoring","PACEMAKER_MON",25
+"Breast Magnetic Resonance Imaging","BREAST_MRI",26
+"Computed Tomography","CT_SCANS",27
+"Fluoroscopy","FLUOROSCOPY",28
+"Magnetic Resonance Cholangiopancreatography","MRCP",29
+"Mobile X-Ray","MOBILE_XRAY",30
+"PET Scans Available","PET_SCANS",31
+"Aquatic Therapy","AQUATIC_THERAPY",32
+"Inpatient Rehab","IP_REHAB",33
+"Lymphedema Pumps","LYMPHADEMA_PUMPS",34
+"Outpatient Pulmonary Rehabilitation","OP_PUL_REHAB",35
+"Pediatric Occupational Therapy","PEDS_OT",36
+"Pediatric Physical Therapy","PEDS_PT",37
+"Speech Therapy","ST",38
+"AED 24/7 (SNF)","AED",39
+"Bariatric beds for pts > 300lbs (SNF)","BARIATRIC_BED",40
+"CPR 24/7 (SNF)","CPR",41
+"Electronic Health Record capability","EHR",42
+"Inpatient Hospice beds (SNF)","IP_HOSPICE",43
+"Invasive Bi Inspiratory Positive Airway Pressure","BI_PAP",44
+"Isolation beds (SNF)","ISOLATION",45
+"Outpatient Rehabilitation Services","OUTPAT_REHAB",46
+"Psych/Dementia beds (SNF)","PSYCH_DEMENTIA",47
+"Respite Care (SNF)","RESPITE",48
+"TPN Management (SNF)","TPN",49
+"Vent Beds Chronic (SNF)","VENT_BEDS_LTC",50
+"Vent Beds Weaning (SNF)","VENT_BEDS_WEANING",51
+"Wound & Ostomy Certified Nurse (SNF)","WOUND_OST_NURSE",52
+"Airway Clearance Systems","AIR_CLEAR_SYS",53
+"Bi-Directional Splinting Device","BI_DIRECT_DEVICE",54
+"Bone Growth Stimulators","BONE_GROWTH",55
+"Continuous Passive Motion Devices","CPMS",56
+"Custom Rehab Equipment","CUST_REHAB_EQ",57
+"Dynamic Splinting Devices","DYNA_SPLINT_DEV",58
+"Insulin Pumps & Supplies","INSULIN_PUMPS",59
+"Ostomy Supplies","OSTOMY_SUPPLIES",60
+"Power Wheelchairs","PWR_WHEEL_CHAIRS",61
+"Scooters","SCOOTERS",62
+"Seat Lift Chair","SEATLIFT_CHAIR",63
+"Splinting Devices","SPLINT",64
+"Urological Supplies","UROLOGICAL_SUP",65
+"Wound & Ostomy Supplies","WOUND_OST_SUP",66
+"Wound, Negative Pressure Therapy","WOUND_VAC_SUP",67
+"Home Health","HOME_HEALTH",68
+"Home Health - Maternal Child","HH_MAT_CHILD",69
+"Hospice","HOSPICE",70
+"Mastectomy Supplies","MAST_SUPPLIES",71
+"Orthotic Devices - Lower Limb","ORTHO_DEV_LL",72
+"Orthotic Devices - Upper Limb","ORTHO_DEV_UL",73
+"Orthotic Shoes","ORTHO_SHOES",74
+"Orthotics","ORTHOTICS",75
+"Prosthetics","PROSTHETICS",76
+"Prosthetics, Custom","PROST_CUSTOM",77

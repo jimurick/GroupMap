@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz,db}
+\usetikzlibrary{calc,backgrounds}
+\begin{document}
+\begin{tikzpicture}
+
+  \coordinate (z1) at (0,0);
+  \coordinate (Z2) at (1.5,2.0);
+  \coordinate (z2) at ($ 0.55*(z1) + 0.45*(Z2) $);
+
+  \draw[myblue!50,fill=myblue!50] (z1) circle (2.5);
+  \draw[brown!70!black,fill=brown!70!black] let \p1=($ (Z2)-(z2) $) in (z2) circle ({veclen(\x1,\y1)});
+
+  \node[mypoint,label=right:$z_1$] at (z1) {};
+  \node[mypoint,label=right:$z_2$] at (z2) {};
+
+  \draw[very thick] (z1) -- (z2) node[pos=0.5,anchor=south east] {$D$};
+  \draw[very thick] (z1) -- (2.0,-1.5) node[pos=0.5,anchor=north east] {$R$};
+
+  \coordinate (z1') at (6.5,0);
+  \coordinate (Z2') at ($ (Z2) + (z1') $);
+  \coordinate (z2') at ($ (z2) + (z1') $);
+
+  \draw[myblue!50,fill=myblue!50] (z1') circle (2.5);
+  \draw[brown!70!black,fill=brown!70!black] let \p1=($ (Z2')-(z2') $) in (z2') circle ({veclen(\x1,\y1)});
+  \draw[green!45!black,fill=green!45!black] let \p1=($ (Z2')-(z2') $) in (z2') circle ({0.65 * veclen(\x1,\y1)});
+  \draw[very thick] let \p1=($ (Z2')-(z2') $) in (z2') -- +(-{0.65 * veclen(\x1,\y1)},0)
+    node[pos=0.5,anchor=south] {$T$};
+
+  \node[mypoint,label=right:$z_2$] at (z2') {};
+
+\end{tikzpicture}
+\end{document}
